@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avia search</title>
+<link href="styles/styles.css" rel="stylesheet"></head>
+
+<body>
+  <div class="container">
+    <div class="aviatickets">
+      <div class="sort">
+        <div class="sort__header"></div>
+        <div class="sort__filters">
+          <div class="sort__item">
+            <h4 class="sort__title">Сортировать</h4>
+            <label>
+              <input type="radio" name="sort">
+              - По возрастанию</label>
+            <label>
+              <input type="radio" name="sort">
+              - По убыванию</label>
+            <label>
+              <input type="radio" name="sort">
+              - По времени в пути
+            </label>
+          </div>
+
+          <div class="sort__item">
+            <h4 class="sort__title">Фильтровать</h4>
+            <label>
+              <input type="checkbox" name="sort">
+              - 1 пересадка</label>
+            <label>
+              <input type="checkbox" name="sort">
+              - Без пересадок</label>
+          </div>
+
+          <div class="sort__item">
+            <h4 class="sort__title">Цена</h4>
+            <div class="sort__price-container">
+              <p class="sort__price-parameter">От</p>
+              <input class="sort__price" type="text" name="sort" placeholder="Минимальная цена">
+            </div>
+            <div class="sort__price-container">
+              <p class="sort__price-parameter">До</p>
+              <input class="sort__price" type="text" name="sort" placeholder="Максимальная цена">
+            </div>
+          </div>
+
+          <div class="sort__item">
+            <h4 class="sort__title">Авиакомпании</h4>
+            <label>
+              <input type="checkbox" name="sort">
+              - 1 пересадка</label>
+            <label>
+              <input type="checkbox" name="sort">
+              - Без пересадок</label>
+          </div>
+
+
+
+
+        </div>
+        <div class="sort__footer"></div>
+      </div>
+
+
+
+      <div class="aviatickets__tickets"></div>
+    </div>
+
+  </div>
+
+<script src="bundle.js"></script></body>
+
+</html>

@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto; }
+
+.hide {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.aviatickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto; }
+
+.hide {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.aviatickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.sort {
+  width: 25%; }
+  .sort__header, .sort__footer {
+    background-color: #bebebe;
+    width: 100%; }
+  .sort__header {
+    height: 50px; }
+  .sort__footer {
+    height: 150px; }
+  .sort__filters {
+    padding: 35px 15px; }
+  .sort__item {
+    padding-bottom: 30px; }
+    .sort__item:last-child {
+      padding-bottom: 0; }
+    .sort__item > label {
+      display: block;
+      cursor: pointer;
+      color: #828282; }
+      .sort__item > label > input {
+        cursor: pointer; }
+  .sort__title {
+    color: #5a5a5a;
+    margin-bottom: 15px; }
+  .sort__price-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .sort__price-container:last-child {
+      padding-bottom: 0; }
+  .sort__price-parameter {
+    width: 10%;
+    color: #828282; }
+  .sort__price {
+    width: 85%;
+    height: 25px;
+    outline: none;
+    border: 1px solid #323232;
+    padding: 5px;
+    border-radius: 5px;
+    color: #282828; }
+
+
+/*# sourceMappingURL=styles.css.map*/

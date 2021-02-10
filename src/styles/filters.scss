@@ -1,0 +1,74 @@
+@import './styles.scss';
+
+.sort {
+  width: 25%;
+
+  &__header,
+  &__footer {
+    background-color: $background-lightGrey;
+    width: 100%;
+  }
+  
+  &__header {
+    height: 50px;
+  }
+  
+  &__footer {
+    height: 150px;
+  }
+  
+  &__filters {
+    padding: 35px 15px;
+  }
+
+  &__item {
+    padding-bottom: 30px;
+
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    & > label {
+      display: block;
+      cursor: pointer;
+      color: $text-lightGrey;
+
+      & > input {
+        cursor: pointer;
+      }
+    }
+
+
+  }
+
+  &__title {
+    color: $title-color;
+    margin-bottom: 15px;
+  }
+
+  &__price-container {
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__price-parameter {
+    width: 10%;
+    color: $text-lightGrey;
+  }
+
+  &__price {
+    width: 85%;
+    height: 25px;
+    outline: none;
+    border: 1px solid $borger-darkGrey;
+    padding: 5px;
+    border-radius: 5px;
+    color: $text-darkGrey;
+  }
+}

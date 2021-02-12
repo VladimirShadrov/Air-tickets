@@ -16,25 +16,25 @@
         <div class="sort__filters">
           <div class="sort__item">
             <h4 class="sort__title">Сортировать</h4>
-            <label>
-              <input type="radio" name="sort">
+            <label data-id="up">
+              <input type="radio" name="sort" data-id="up">
               - По возрастанию</label>
-            <label>
-              <input type="radio" name="sort">
+            <label data-id="down">
+              <input type="radio" name="sort" data-id="down">
               - По убыванию</label>
-            <label>
-              <input type="radio" name="sort">
+            <label data-id="time">
+              <input type="radio" name="sort" data-id="time">
               - По времени в пути
             </label>
           </div>
 
           <div class="sort__item">
             <h4 class="sort__title">Фильтровать</h4>
-            <label>
-              <input type="checkbox" name="sort">
+            <label data-id="one-transfer">
+              <input type="checkbox" name="sort" data-id="one-transfer">
               - 1 пересадка</label>
-            <label>
-              <input type="checkbox" name="sort">
+            <label data-id="no-transfer">
+              <input type="checkbox" name="sort" data-id="no-transfer">
               - Без пересадок</label>
           </div>
 
@@ -42,22 +42,23 @@
             <h4 class="sort__title">Цена</h4>
             <div class="sort__price-container">
               <p class="sort__price-parameter">От</p>
-              <input class="sort__price" type="text" name="sort" placeholder="Минимальная цена">
+              <input class="sort__price" type="text" name="sort" placeholder="Минимальная цена" data-id="from">
             </div>
             <div class="sort__price-container">
               <p class="sort__price-parameter">До</p>
-              <input class="sort__price" type="text" name="sort" placeholder="Максимальная цена">
+              <input class="sort__price" type="text" name="sort" placeholder="Максимальная цена" data-id="to">
             </div>
           </div>
 
           <div class="sort__item">
             <h4 class="sort__title">Авиакомпании</h4>
-            <label>
-              <input type="checkbox" name="sort">
-              - 1 пересадка</label>
-            <label>
-              <input type="checkbox" name="sort">
-              - Без пересадок</label>
+            <div class="sort__air-carrier-wrapper">
+              <label>
+                <input type="checkbox" name="sort">
+                - LOT Polish Airlinesdddddddddddddd
+              </label>
+              <span>от 21049 р.</span>
+            </div>
           </div>
 
 

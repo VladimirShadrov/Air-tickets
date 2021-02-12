@@ -92,9 +92,27 @@
     height: 25px;
     outline: none;
     border: 1px solid #323232;
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
-    color: #282828; }
+    color: #282828;
+    font-size: 16px; }
+  .sort__air-carrier-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #828282; }
+    .sort__air-carrier-wrapper > label {
+      width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      padding-right: 5px; }
+    .sort__air-carrier-wrapper > span {
+      width: 35%; }
 
 
 /*# sourceMappingURL=styles.css.map*/

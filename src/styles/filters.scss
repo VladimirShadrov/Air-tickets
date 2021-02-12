@@ -67,8 +67,27 @@
     height: 25px;
     outline: none;
     border: 1px solid $borger-darkGrey;
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
     color: $text-darkGrey;
+    font-size: 16px;
+  }
+
+  &__air-carrier-wrapper {
+    display: flex;
+    align-items: center;
+    color: $text-lightGrey;
+
+    & > label {
+      width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 5px;
+    }
+
+    & > span {
+      width: 35%;
+    }
   }
 }

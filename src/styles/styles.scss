@@ -6,6 +6,10 @@ $borger-darkGrey: rgb(50, 50, 50);
 $border-lightGrey: rgb(150, 150, 150);
 $text-lightGrey: rgb(130, 130, 130);
 $text-darkGrey: rgb(40, 40, 40);
+$light-blue: rgb(70, 130, 180);
+$white-text: rgb(255, 255, 255);
+$orange-text: orange;
+$dark-orange: rgb(255, 140, 0);
 
 
 * {
@@ -27,5 +31,5 @@ $text-darkGrey: rgb(40, 40, 40);
 .aviatickets {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }

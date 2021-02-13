@@ -205,15 +205,18 @@
       content: '';
       position: absolute;
       bottom: 0;
-      left: calc(50% - 40%);
+      left: calc(50% - 43%);
       height: 1px;
-      width: 80%;
+      width: 87%;
       display: block;
       margin: 0 auto;
       background-color: #323232; }
   .aviaticket__date, .aviaticket__month, .aviaticket__day {
-    color: steelblue; }
-  .aviaticket__transfer {
+    color: steelblue;
+    font-size: 18px; }
+  .aviaticket__travel-time {
+    font-size: 20px; }
+  .aviaticket__transfer-there, .aviaticket__transfer-back {
     position: absolute;
     height: 25px;
     width: 140px;

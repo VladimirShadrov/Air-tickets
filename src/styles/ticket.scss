@@ -73,9 +73,9 @@
       content: '';
       position: absolute;
       bottom: 0;
-      left: calc(50% - 40%);
+      left: calc(50% - 43%);
       height: 1px;
-      width: 80%;
+      width: 87%;
       display: block;
       margin: 0 auto;
       background-color: $borger-darkGrey;
@@ -86,9 +86,15 @@
   &__month,
   &__day {
     color: $light-blue;
+    font-size: 18px;
   }
 
-  &__transfer {
+  &__travel-time {
+    font-size: 20px;
+  }
+
+  &__transfer-there,
+  &__transfer-back {
     position: absolute;
     height: 25px;
     width: 140px;

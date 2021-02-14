@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto; }
+
+.hide {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.aviatickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto; }
+
+.hide {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.aviatickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.sort {
+  width: 25%; }
+  .sort__header, .sort__footer {
+    background-color: #bebebe;
+    width: 100%; }
+  .sort__header {
+    height: 50px; }
+  .sort__footer {
+    height: 150px; }
+  .sort__filters {
+    padding: 35px 15px; }
+  .sort__item {
+    padding-bottom: 30px; }
+    .sort__item:last-child {
+      padding-bottom: 0; }
+    .sort__item > label {
+      display: block;
+      cursor: pointer;
+      color: #828282; }
+      .sort__item > label > input {
+        cursor: pointer; }
+  .sort__title {
+    color: #5a5a5a;
+    margin-bottom: 15px; }
+  .sort__price-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .sort__price-container:last-child {
+      padding-bottom: 0; }
+  .sort__price-parameter {
+    width: 10%;
+    color: #828282; }
+  .sort__price {
+    width: 85%;
+    height: 25px;
+    outline: none;
+    border: 1px solid #323232;
+    padding: 7px;
+    border-radius: 5px;
+    color: #282828;
+    font-size: 16px; }
+  .sort__air-carrier-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #828282; }
+    .sort__air-carrier-wrapper > label {
+      width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      padding-right: 5px; }
+    .sort__air-carrier-wrapper > span {
+      width: 35%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto; }
+
+.hide {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.aviatickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.aviaticket {
+  width: 75%;
+  padding: 25px; }
+  .aviaticket__aviaticket {
+    width: 100%; }
+  .aviaticket__header {
+    background-color: steelblue;
+    padding: 5px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .aviaticket__logo {
+    height: 35px;
+    overflow: hidden; }
+    .aviaticket__logo > img {
+      height: 100%; }
+  .aviaticket__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: white;
+    font-size: 24px; }
+    .aviaticket__price > span {
+      text-transform: uppercase; }
+  .aviaticket__description {
+    font-size: 12px; }
+  .aviaticket__there-container, .aviaticket__back-container {
+    padding: 0px 15px;
+    border-bottom: 2px solid steelblue;
+    font-size: 22px; }
+  .aviaticket__there, .aviaticket__time, .aviaticket__flight, .aviaticket__back {
+    padding: 10px 20px;
+    border-bottom: 1px solid #bebebe; }
+  .aviaticket__airport-abbreviation, .aviaticket__arrow-right {
+    color: steelblue; }
+  .aviaticket__time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    border-bottom: none;
+    padding-bottom: 17px; }
+    .aviaticket__time::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 43%);
+      height: 1px;
+      width: 87%;
+      display: block;
+      margin: 0 auto;
+      background-color: #323232; }
+  .aviaticket__date, .aviaticket__month, .aviaticket__day {
+    color: steelblue;
+    font-size: 18px; }
+  .aviaticket__travel-time {
+    font-size: 20px; }
+  .aviaticket__transfer-there, .aviaticket__transfer-back {
+    position: absolute;
+    height: 25px;
+    width: 140px;
+    color: orange;
+    font-size: 20px;
+    text-align: center;
+    bottom: calc(-50% + 17px);
+    left: calc(50% - 70px);
+    background-color: white; }
+  .aviaticket__flight {
+    padding-top: 25px;
+    border-bottom: none; }
+  .aviaticket__flight-text {
+    font-size: 20px; }
+  .aviaticket__back-container {
+    border-bottom: none; }
+  .aviaticket__btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22px;
+    background-color: orange;
+    cursor: pointer;
+    padding: 12px;
+    margin-bottom: 25px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .aviaticket__btn:hover {
+      background-color: darkorange; }
+
+.show-more {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #000;
+  background-color: #e6e6e6;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .show-more:hover {
+    background-color: #bebebe; }
+
+
+/*# sourceMappingURL=styles.css.map*/

@@ -1,11 +1,14 @@
 export function createFlightCard(flight) {
   let departureTimeThere = flight.flight.legs[0].segments[0].departureDate.slice(11, flight.flight.legs[0].segments[0].departureDate.length - 3);
 
-  let arrivalTimeThere = flight.flight.legs[0].segments[1].arrivalDate.slice(11, flight.flight.legs[0].segments[1].arrivalDate.length - 3) || flight.flight.legs[0].segments[0].arrivalDate.slice(11, flight.flight.legs[0].segments[0].arrivalDate.length - 3);
+  
+  let arrivalTimeThereWayToData = flight.flight.legs[0].segments[1] || flight.flight.legs[0].segments[0];
+  let arrivalTimeThere = arrivalTimeThereWayToData.arrivalDate.slice(11, arrivalTimeThereWayToData.arrivalDate.length - 3);
 
   let departureTimeBack = flight.flight.legs[1].segments[0].departureDate.slice(11, flight.flight.legs[0].segments[0].arrivalDate.length - 3);
 
-  let arrivalTimeBack = flight.flight.legs[1].segments[1].arrivalDate.slice(11, flight.flight.legs[0].segments[0].arrivalDate.length - 3) || flight.flight.legs[1].segments[0].arrivalDate.slice(11, flight.flight.legs[0].segments[0].arrivalDate.length - 3);
+  let arrivalTimeBackWayToData = flight.flight.legs[1].segments[1] || flight.flight.legs[1].segments[0];
+  let arrivalTimeBack = arrivalTimeBackWayToData.arrivalDate.slice(11, arrivalTimeBackWayToData.arrivalDate.length - 3);
 
   let durationInHoursThere = '' + Math.floor(flight.flight.legs[0].duration / 60);
 
@@ -17,34 +20,35 @@ export function createFlightCard(flight) {
 
   let departureDateThere = new Date(flight.flight.legs[0].segments[0].departureDate).getDate();
 
-  let arrivalDateThere = new Date(flight.flight.legs[0].segments[1].arrivalDate).getDate() || new Date(flight.flight.legs[0].segments[0].arrivalDate).getDate();
+  let currenWayToData = flight.flight.legs[0].segments[1] || flight.flight.legs[0].segments[0];
+  let arrivalDateThere = new Date(currenWayToData.arrivalDate).getDate();
 
   let departureDateBack = new Date(flight.flight.legs[1].segments[0].departureDate).getDate();
 
-  let arrivalDateBack = new Date(flight.flight.legs[1].segments[1].arrivalDate).getDate() || new Date(flight.flight.legs[1].segments[0].arrivalDate).getDate();
+  let arrivalDateBack = new Date(currenWayToData.arrivalDate).getDate();
 
   let departureDayThereNumberCode = new Date(flight.flight.legs[0].segments[0].departureDate).getDay();
   let departureDayThere = getWeekDay(departureDayThereNumberCode);
 
-  let arrivalDayThereNumberCode = new Date(flight.flight.legs[0].segments[1].departureDate).getDay() || new Date(flight.flight.legs[0].segments[0].departureDate).getDay();
+  let arrivalDayThereNumberCode = new Date(currenWayToData.departureDate).getDay();
   let arrivalDayThere = getWeekDay(arrivalDayThereNumberCode);
 
   let departureDayBackNumberCode = new Date(flight.flight.legs[1].segments[0].departureDate).getDay() ;
   let departureDayBack = getWeekDay(departureDayBackNumberCode);
 
-  let arrivalDayBackNumberCode = new Date(flight.flight.legs[1].segments[1].departureDate).getDay() || new Date(flight.flight.legs[1].segments[0].departureDate).getDay();
+  let arrivalDayBackNumberCode = new Date(currenWayToData.departureDate).getDay();
   let arrivalDayBack = getWeekDay(arrivalDayBackNumberCode);
 
   let departureMonthThereNumberCode = new Date(flight.flight.legs[0].segments[0].departureDate).getMonth();
   let departureMonthThere = getFlightMonth(departureMonthThereNumberCode);
 
-  let arrivalMonthThereNumberCode = new Date(flight.flight.legs[0].segments[1].departureDate).getMonth() || new Date(flight.flight.legs[0].segments[0].departureDate).getMonth();
+  let arrivalMonthThereNumberCode = new Date(currenWayToData.departureDate).getMonth();
   let arrivalMonthThere = getFlightMonth(arrivalMonthThereNumberCode);
 
   let departureMonthBackNumberCode = new Date(flight.flight.legs[1].segments[0].departureDate).getMonth();
   let departureMonthBack = getFlightMonth(departureMonthBackNumberCode);
 
-  let arrivalMonthBackNumberCode = new Date(flight.flight.legs[1].segments[1].departureDate).getMonth() || new Date(flight.flight.legs[1].segments[0].departureDate).getMonth();
+  let arrivalMonthBackNumberCode = new Date(currenWayToData.departureDate).getMonth();
   let arrivalMonthBack = getFlightMonth(arrivalMonthBackNumberCode);
 
   let html = `
@@ -66,11 +70,11 @@ export function createFlightCard(flight) {
         <span class="aviaticket__airport">${flight.flight.legs[0].segments[0].departureAirport.caption}</span>
         <span class="aviaticket__airport-abbreviation">(${flight.flight.legs[0].segments[0].departureAirport.uid})</span>
         <span class="aviaticket__arrow-right">&#8594;</span>
-        <span class="aviaticket__sity">${flight.flight.legs[0].segments[1].arrivalCity.caption || flight.flight.legs[0].segments[0].arrivalCity.caption
+        <span class="aviaticket__sity">${currenWayToData.arrivalCity.caption
     },</span>
-        <span class="aviaticket__airport">${flight.flight.legs[0].segments[1].arrivalAirport.caption || flight.flight.legs[0].segments[0].arrivalAirport.caption
+        <span class="aviaticket__airport">${currenWayToData.arrivalAirport.caption
     }</span>
-        <span class="aviaticket__airport-abbreviation">(${flight.flight.legs[0].segments[1].arrivalAirport.uid || flight.flight.legs[0].segments[0].arrivalAirport.uid
+        <span class="aviaticket__airport-abbreviation">(${currenWayToData.arrivalAirport.uid
     })</span>
       </div>
       <div class="aviaticket__time">
@@ -105,9 +109,9 @@ export function createFlightCard(flight) {
         <span class="aviaticket__airport">${flight.flight.legs[1].segments[0].departureAirport.caption}</span>
         <span class="aviaticket__airport-abbreviation">(${flight.flight.legs[1].segments[0].departureAirport.uid})</span>
         <span class="aviaticket__arrow-right">&#8594;</span>
-        <span class="aviaticket__sity">${flight.flight.legs[1].segments[1].arrivalCity.caption || flight.flight.legs[1].segments[0].arrivalCity.caption},</span>
-        <span class="aviaticket__airport">${flight.flight.legs[1].segments[1].arrivalAirport.caption || flight.flight.legs[1].segments[0].arrivalAirport.caption}</span>
-        <span class="aviaticket__airport-abbreviation">(${flight.flight.legs[1].segments[1].arrivalAirport.uid || flight.flight.legs[1].segments[0].arrivalAirport.uid})</span>
+        <span class="aviaticket__sity">${currenWayToData.arrivalCity.caption},</span>
+        <span class="aviaticket__airport">${currenWayToData.arrivalAirport.caption}</span>
+        <span class="aviaticket__airport-abbreviation">(${currenWayToData.arrivalAirport.uid})</span>
       </div>
       <div class="aviaticket__time">
         <div class="aviaticket__departure-time">

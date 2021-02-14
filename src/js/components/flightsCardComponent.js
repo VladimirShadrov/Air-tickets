@@ -6,7 +6,6 @@ export class FlightsCard {
     this.container = container;
     this.cardValue = 2;
     this.data = data;
-    console.log(this.data);
     this.init();
     this.renderFlightCard(this.data);
   }

@@ -2,8 +2,9 @@ import '../styles/styles.scss';
 import '../styles/filters.scss';
 import '../styles/ticket.scss';
 import { data } from './data';
+import { createFlightCard } from './helpers/flightCard';
 
-const flights = data.result.flights;
+let flights = data.result.flights;
 
 // Добавление изображений логотипов перевозчиков в массив данных
 flights.forEach(item => {
@@ -48,60 +49,15 @@ flights.forEach(item => {
   }
 })
 
-console.log(flights[0]);
-
-
-let departureDateBack = new Date(flights[0].flight.legs[1].segments[0].departureDate).getDay();
-
-let arrivalDateBack = new Date(flights[0].flight.legs[1].segments[1].arrivalDate).getDate() || new Date(flights[0].flight.legs[1].segments[0].arrivalDate).getDate();
-
-function getArrivalMonthBack(flight) {
-  const month = new Date(flight.flight.legs[1].segments[1].departureDate).getMonth() || new Date(flight.flight.legs[1].segments[0].departureDate).getMonth();
-  let monthStr;
-
-  switch (month) {
-    case 0:
-      monthStr = 'янв.'
-      break;
-    case 1:
-      monthStr = 'фев.'
-      break;
-    case 2:
-      monthStr = 'мар.'
-      break;
-    case 3:
-      monthStr = 'апр.'
-      break;
-    case 4:
-      monthStr = 'май'
-      break;
-    case 5:
-      monthStr = 'июн.'
-      break;
-    case 6:
-      monthStr = 'июл.'
-      break;
-    case 7:
-      monthStr = 'авг.'
-      break;
-    case 8:
-      monthStr = 'сен.'
-      break;
-    case 9:
-      monthStr = 'окт.'
-      break;
-    case 10:
-      monthStr = 'ноя.'
-      break;
-    default:
-      monthStr = 'дек'
-      break;
-  }
-
-  return monthStr;
+function showFlightsCards(flightsArray) {
+  const container = document.querySelector('.aviaticket__wrapper');
+  const html = createFlightCard(flightsArray);
+  container.innerHTML = '';
+  container.insertAdjacentHTML('afterbegin', html);
 }
 
-getArrivalMonthBack(flights[0])
+showFlightsCards(flights[0])
+
 
 
 

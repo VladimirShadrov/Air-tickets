@@ -1,6 +1,7 @@
 export function createFlightCard(flight) {
-  let departureTimeThere = flight.flight.legs[0].segments[0].departureDate.slice(11, flight.flight.legs[0].segments[0].departureDate.length - 3);
+  let currenWayToData = flight.flight.legs[0].segments[1] || flight.flight.legs[0].segments[0];
 
+  let departureTimeThere = flight.flight.legs[0].segments[0].departureDate.slice(11, flight.flight.legs[0].segments[0].departureDate.length - 3);
   
   let arrivalTimeThereWayToData = flight.flight.legs[0].segments[1] || flight.flight.legs[0].segments[0];
   let arrivalTimeThere = arrivalTimeThereWayToData.arrivalDate.slice(11, arrivalTimeThereWayToData.arrivalDate.length - 3);
@@ -20,7 +21,6 @@ export function createFlightCard(flight) {
 
   let departureDateThere = new Date(flight.flight.legs[0].segments[0].departureDate).getDate();
 
-  let currenWayToData = flight.flight.legs[0].segments[1] || flight.flight.legs[0].segments[0];
   let arrivalDateThere = new Date(currenWayToData.arrivalDate).getDate();
 
   let departureDateBack = new Date(flight.flight.legs[1].segments[0].departureDate).getDate();
@@ -148,16 +148,14 @@ export function createFlightCard(flight) {
 
 // Получение значения минут в пути в пункт назначения
 function calculateMinutesThere(flight) {
-  let duration = '' + flight.flight.legs[0].duration / 60;
-  let minutes = duration.slice(3, 5 || duration.length);
+  let minutes = '' + flight.flight.legs[0].duration % 60;
 
   return minutes;
 }
 
 // Получение значения минут в пути обратно
 function calculateMinutesBack(flight) {
-  let duration = '' + flight.flight.legs[1].duration / 60;
-  let minutes = duration.slice(3, 5 || duration.length);
+  let minutes = '' + flight.flight.legs[1].duration % 60;
 
   return minutes;
 }

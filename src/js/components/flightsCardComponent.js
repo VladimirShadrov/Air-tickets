@@ -4,15 +4,15 @@ export class FlightsCard {
   constructor(el, container, data) {
     this.el = el;
     this.container = container;
-    this.data = data;
     this.cardValue = 2;
-
+    this.data = data;
+    console.log(this.data);
     this.init();
-    this.renderFlightCard()
+    this.renderFlightCard(this.data);
   }
 
-  renderFlightCard() {
-    let currentFlightsArray = this.data.slice(0, this.cardValue);
+  renderFlightCard(data) {
+    let currentFlightsArray = data.slice(0, this.cardValue);
     this.container.innerHTML = '';
     
     currentFlightsArray.forEach(item => {
@@ -29,6 +29,6 @@ export class FlightsCard {
 function showFlightsCard(event) {
   if (event.target.classList.contains('show-more')) {
     this.cardValue += 2;
-    this.renderFlightCard();
+    this.renderFlightCard(this.data);
   }
 }
